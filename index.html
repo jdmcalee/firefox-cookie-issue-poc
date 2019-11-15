@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firefox cookie problem PoC</title>
+</head>
+<body>
+<button onclick="doFetch()">Click to make fetch request</button>
+<script type="text/javascript">
+    async function doFetch() {
+        await fetch('setcookie.php');
+        alert(`cookies in javascript: ${document.cookie}`);
+    }
+</script>
+</body>
+</html>
